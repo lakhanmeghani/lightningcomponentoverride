@@ -1,0 +1,8 @@
+public class tryingRecClass {
+    @AuraEnabled
+    public static Contact save(contact con)
+    {
+     insert con;
+        return con;
+    }
+}
