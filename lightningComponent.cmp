@@ -1,0 +1,11 @@
+<aura:component controller="tryingRecClass" implements="flexipage:availableForRecordHome,force:hasRecordId,lightning:actionOverride" access="global" >  
+    <aura:attribute name="newContact" type="Contact"  default="{ 'sobjectType': 'Contact',
+                                                               'First Name': '','Last Name': '','Email':'','Phone':'',}"/>
+    <form>       
+        <lightning:input aura:id="contactField" type="text" value="{!v.newContact.FirstName}" Name="First Name" label ="First Name"/>
+        <lightning:input aura:id="contactField" type="text" value="{!v.newContact.LastName}" Name="Last Name" label ="Last Name"/>
+        <lightning:input aura:id="contactField" type="email" name="email" label="Email"  value="{!v.newContact.Email}" />
+        <lightning:input aura:id="contactField" type="Phone"  value="{!v.newContact.Phone}"  Name="Phone" label="Phone"/>
+        <lightning:button aura:id="contactField" label="Save Contact" onclick="{!c.savecontact}"/>
+    </form>
+</aura:component>
